@@ -7,60 +7,90 @@ html
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
   body
-
     article
+      section
+        h1
+          span.highlight webtérkép
+          | ek az&nbsp;
+          span.highlight energiaipar
+          | ban
+        h3 &mdash; esettanulmány
 
       section
-        h1 (
-          span.highlight nyílt forráskódú
-          | )
-          br
-          | webtérképek az&nbsp;
-          span.highlight energia
-          | iparban
-        h3 esettanulmány
+        h1
+          span.highlight FOSS4G
+          | &nbsp;eszközök (különös tekintettel a webtérképekre) alkalmazása az&nbsp;
+          span.highlight offshore olaj- és gázipar
+          | ban
+        h3 &mdash; esettanulmány
 
       section
-        h1.left rólam
-        h2.left Berényi Attila
+        h1.left Berényi Attila
         div.left
-          | szabadúszó térinformatikai fejlesztő @
-          a(href="http://gislab.hu") GISLab
+          strong térinformatikai fejlesztő @&nbsp;
+            a(href="http://gislab.hu") GISLab
           br
           br
           a(href="https://twitter.com/AttilaBerenyiDr" target="_blank") @AttilaBerenyiDr
-          br
+          | &nbsp;|&nbsp;
           a(href="mailto:aberenyi@gislab.hu") aberenyi@gislab.hu
 
       section.image.image-iris-annoucement
-        h1.top.left miről lesz szó?
-
-      section.bullet
-        h1.left.bullet
-          span.highlight probléma
-          | &nbsp;-> igény
-        h1.left.bullet első lépések (0.x - 1.x)
-        h1.left.bullet hol tartunk most (2.2)
-        h1.left.bullet sikerek/hibák/
-          span.highlight jövőkép&nbsp;
-          | (3.0)
+        h1.top.highlight Iris
 
       section
         h1.left
-          | - Ez a terv utolsó verziója?
+          span.highlight probléma
+          | &nbsp;-> igény
+        h1.left hol tartunk most (2.2)
+        h1.left
+          span.highlight hibák
+          | /
+          span.highlight jövőkép
+
+      section
+        h2.left
+          | - Ezek a legfrissebb koordináták?
           br
-          | - Nem, azt hittem Pista elküldte neked...
+          | - Nem, azt hittem Pista elküldte neked.
           br
           | - Pista szabin van...
           br
-          span.highlight Aj-jaj
 
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
+      section.image.image-uh-oh
+        h1.right.text-6em.highlight Ajjaj
 
-      section.emphatic-text(data-bespoke-backdrop='emphatic')
+      section.image.image-licence-frustration
+        h1.highlight.text-6em
+          br
+          | Licensz
+          br
+          | problémák
+
+      section.image.image-real-time-data
+        h1.highlight.text-6em Valós idejű adatok
+
+      section.image.image-quick-deployment
+        h1.highlight.text-6em Gyors telepítés
+
+      section.image.image-custom-crs
+        h1.top.highlight.text-3em Egyedi vetületek
+
+      section.image.image-bubbles(data-bespoke-backdrop='emphatic')
+        h1.text-6em Webtérkép!
+
+      section
+        h2
+          span.highlight Kiszervezett
+          | &nbsp;vagy&nbsp;
+          span.highlight házon belüli
+          | &nbsp;megoldás?
+        h2 &nbsp;
+        h2
+          | E***I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
+          span.monospace > /dev/null
+
+      section
         h2 Emphatic Slide!
         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
 

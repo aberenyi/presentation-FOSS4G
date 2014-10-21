@@ -9,7 +9,6 @@ secondary = #f16913
 
 slide_width = 640px
 slide_height = 480px
-slide_background = darken(primary, 5)
 
 slide_transition_length = .6s
 slide_transition_easing = ease
@@ -39,11 +38,11 @@ link_transition_easing = ease
   margin: 0
 
 body
-  color: white
+  color white
   font-family 'Play', sans-serif
+  background-color primary
 
 article
-  background-color primary
   transition: all slide_transition_length slide_transition_easing
   display: none
   &.bespoke-parent
@@ -61,22 +60,39 @@ article
 
 a
   transition all link_transition_length link_transition_easing
-  color darken(secondary, 10)
+  color secondary
   text-decoration none
   &:hover
-    color secondary
+    color darken(secondary, 10)
 
 //general styles
 .highlight
   color secondary
 
+.orange
+  color orange
+
 .left
   width 100%
   text-align left
 
+.right
+  width 100%
+  text-align right
+
 .top
   height 100%
   vertical-align top
+
+.text-6em
+  font-size 6em
+
+.text-3em
+  font-size 3em
+
+.monospace
+  font-family "Courier New", Courier, monospace
+  background-color black
 
 //slides
 .bespoke-parent
@@ -117,7 +133,6 @@ a
   margin-top: (slide_height / 2) * -1
   left: 50%
   margin-left: (slide_width / 2) * -1
-  background: slide_background
   padding: 40px
   border-radius: 0
   @media print
@@ -148,9 +163,9 @@ a
 .bespoke-backdrop-active
   opacity: 1
 
-
+/*
 .bespoke-before
-  background lighten(primary, 20)
+ background lighten(primary, 20)
   -webkit-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
   -moz-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
   -ms-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
@@ -231,6 +246,28 @@ a
   transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
   opacity 0.3
   z-index 9
+*/
+
+//.bespoke-before
+.bespoke-after
+  transform: translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
+
+//.bespoke-after
+.bespoke-before
+  transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
+  @media print
+    transform: none
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+  @media print
+    opacity 1
+
+.bespoke-active
+  opacity: 1
+  transition-delay: .2s
+
 
 //progress bar
 .bespoke-progress-parent
@@ -249,15 +286,39 @@ a
 
 //emphatic
 .emphatic
-  background: #222
+  background: secondary
 
 .emphatic-text
-  color: white
+  color: primary
 
 //images
 .image
   background-position: center
   background-repeat: no-repeat
   &-iris-annoucement
-    background-size 100%
+    background-size 70%
     background-image url(../images/iris_2.2_annoucement.png)
+
+  &-uh-oh
+    background-size 100%
+    background-image url(../images/gif/uh-oh.gif)
+
+  &-licence-frustration
+    background-size 100% 100%
+    background-image url(../images/licence-frustration.jpg)
+
+  &-real-time-data
+    background-size 100% 100%
+    background-image url(../images/realtime.jpg)
+
+  &-quick-deployment
+    background-size 100% 100%
+    background-image url(../images/gif/skydive.gif)
+
+  &-custom-crs
+    background-size 100%
+    background-image url(../images/projections.png)
+
+  &-bubbles
+    background-size 100% 100%
+    background-image url(../images/gif/bubbles.gif)

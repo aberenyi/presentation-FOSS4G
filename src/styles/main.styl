@@ -1,27 +1,10 @@
 @import 'normalizecss/normalize.css'
 
+@import variables
+@import bespoke
+
 //fonts
 @import url("http://fonts.googleapis.com/css?family=Play:400,700")
-
-//variables
-primary = #303030
-secondary = #f16913
-
-slide_width = 640px
-slide_height = 480px
-
-slide_transition_length = .6s
-slide_transition_easing = ease
-slide_transition_rotate_y = 20deg
-//Safari bugs out on 3d transform-origins, so we have to fake it
-slide_transition_nudge_x = -640px
-slide_transition_scale = 0.4
-
-bullet_transition_length = .3s
-bullet_transition_easing = ease
-
-link_transition_length = .2s
-link_transition_easing = ease
 
 //base
 *
@@ -42,32 +25,19 @@ body
   font-family 'Play', sans-serif
   background-color primary
 
-article
-  transition: all slide_transition_length slide_transition_easing
-  display: none
-  &.bespoke-parent
-    display: block
-    position: absolute
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    overflow: hidden
-    perspective: 600px
-    @media print
-      overflow: visible
-      position: static
-
 a
   transition all link_transition_length link_transition_easing
   color secondary
   text-decoration none
   &:hover
-    color darken(secondary, 10)
+    color darken(secondary, 20)
 
 //general styles
 .highlight
   color secondary
+
+.bgHighlight
+  background-color rgba(255,255,255,0.5)
 
 .orange
   color orange
@@ -84,212 +54,21 @@ a
   height 100%
   vertical-align top
 
+.bottom
+  margin-top auto
+
 .text-6em
   font-size 6em
 
 .text-3em
   font-size 3em
 
+.text-small
+  font-size .25em
+
 .monospace
   font-family "Courier New", Courier, monospace
   background-color black
-
-//slides
-.bespoke-parent
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  overflow: hidden
-
-.bespoke-scale-parent
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  pointer-events: none
-  .bespoke-active
-    pointer-events: auto
-
-.bespoke-slide
-  transition:
-    transform slide_transition_length slide_transition_easing,
-    opacity slide_transition_length slide_transition_easing,
-    background slide_transition_length slide_transition_easing
-  transform-origin: 50% 50% 0
-  transform: translate3d(0,0,0)
-  backface-visibility: hidden
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  text-align: center
-  width: slide_width
-  height: slide_height
-  position: absolute
-  top: 50%
-  margin-top: (slide_height / 2) * -1
-  left: 50%
-  margin-left: (slide_width / 2) * -1
-  padding: 40px
-  border-radius: 0
-  @media print
-    zoom: 1 !important // disable bespoke-scale
-    height: 743px // seems to correspond with an A4, landscape page height
-    width: 100%
-    page-break-before: always
-    position: static
-    margin: 0
-
-.bespoke-inactive
-  opacity: 0
-  pointer-events: none
-
-.bespoke-bullet-inactive
-  opacity: 0
-  pointer-events: none
-
-.bespoke-backdrop
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  z-index: -1
-  opacity: 0
-
-.bespoke-backdrop-active
-  opacity: 1
-
-/*
-.bespoke-before
- background lighten(primary, 20)
-  -webkit-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  z-index 6
-
-.bespoke-before-3
-  -webkit-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.1
-  z-index 7
-
-.bespoke-before-2
-  -webkit-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.2
-  z-index 8
-
-.bespoke-before-1
-  .content
-    opacity 0.3
-  -webkit-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.3
-  z-index 9
-
-.bespoke-active
-  z-index 10
-
-.bespoke-after
-  background lighten(primary, 20)
-  -webkit-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  z-index 6
-
-.bespoke-after-3
-  .content
-    display none
-  -webkit-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.1
-  z-index 7
-
-.bespoke-after-2
-  .content
-    display none
-  -webkit-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.2
-  z-index 8
-
-.bespoke-after-1
-  .content
-    opacity 0.3
-  -webkit-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.3
-  z-index 9
-*/
-
-//.bespoke-before
-.bespoke-after
-  transform: translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
-
-//.bespoke-after
-.bespoke-before
-  transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
-  @media print
-    transform: none
-
-.bespoke-inactive
-  opacity: 0
-  pointer-events: none
-  @media print
-    opacity 1
-
-.bespoke-active
-  opacity: 1
-  transition-delay: .2s
-
-
-//progress bar
-.bespoke-progress-parent
-  position: absolute
-  top: 0
-  left: 0
-  right: 0
-  height: .3vw
-  z-index 15
-
-.bespoke-progress-bar
-  position: absolute
-  height: 100%
-  background: darken(secondary, 10)
-  transition: width .6s ease
-
-//emphatic
-.emphatic
-  background: secondary
-
-.emphatic-text
-  color: primary
 
 //images
 .image
@@ -322,3 +101,15 @@ a
   &-bubbles
     background-size 100% 100%
     background-image url(../images/gif/bubbles.gif)
+
+  &-ingredients
+    background-size 100% 100%
+    background-image url(../images/ingredients.jpg)
+
+  &-sailboat
+    background-size 100% 100%
+    background-image url(../images/sailboat.jpg)
+
+  &-reidhoffman
+    background-size 100% 100%
+    background-image url(../images/reidhoffman.jpg)

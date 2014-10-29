@@ -5,6 +5,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Webtérképek az energiaiparban
     link(rel='stylesheet', type='text/css', href='build/build.css')
+    link(rel='stylesheet', type='text/css', href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
 
   body
     article
@@ -18,30 +19,45 @@ html
 
       section
         h1
+          | Egy&nbsp;
           span.highlight FOSS4G
-          | &nbsp;eszközök (különös tekintettel a webtérképekre) alkalmazása az&nbsp;
-          span.highlight offshore olaj- és gázipar
+          | &nbsp;komponensenkre épülő projekt-támogatási rendszer az&nbsp;
+          span.highlight (offshore) olaj- és gázipar
           | ban
-        h3 &mdash; esettanulmány
 
       section
         h1.left Berényi Attila
         div.left
           strong térinformatikai fejlesztő @&nbsp;
             a(href="http://gislab.hu") GISLab
-          br
-          br
+        br
+        div.left
+          span.fa-stack
+            i.fa.fa-square-o.fa-stack-2x
+            i.fa.fa-twitter.fa-stack-1x
           a(href="https://twitter.com/AttilaBerenyiDr" target="_blank") @AttilaBerenyiDr
-          | &nbsp;|&nbsp;
+          br
+          span.fa-stack
+            i.fa.fa-square-o.fa-stack-2x
+            i.fa.fa-send.fa-stack-1x
           a(href="mailto:aberenyi@gislab.hu") aberenyi@gislab.hu
-
-      section.image.image-iris-annoucement
-        h1.top.highlight Iris
+          
+      section
+        h1 Miben különleges az&nbsp;
+          span.highlight {energia,olaj- és gáz}
+          | ipar?
+        
+      section
+        h1
+          span.highlight semmi
+          | ben*
+        div.text-small *az iparágban dolgozók véleménye ettől eltérhet
 
       section
         h1.left
-          span.highlight probléma
-          | &nbsp;-> igény
+          span.highlight probléma&nbsp;
+          i.fa.fa-arrows-h
+          | &nbsp;igény
         h1.left hol tartunk most (2.2)
         h1.left
           span.highlight hibák
@@ -71,12 +87,13 @@ html
         h1.highlight.text-6em Valós idejű adatok
 
       section.image.image-quick-deployment
-        h1.highlight.text-6em Gyors telepítés
+        h1.highlight.text-6em Határidő
 
       section.image.image-custom-crs
-        h1.top.highlight.text-3em Egyedi vetületek
+        h1.top.text-3em
+          span.highlight.bgHighlight Egyedi vetületek
 
-      section.image.image-bubbles(data-bespoke-backdrop='emphatic')
+      section.image.image-bubbles(data-bespoke-state='orange')
         h1.text-6em Webtérkép!
 
       section
@@ -87,8 +104,33 @@ html
           | &nbsp;megoldás?
         h2 &nbsp;
         h2
-          | E***I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
+          | E**I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
           span.monospace > /dev/null
+      
+      section.image.image-ingredients
+        h1.text-6em.bgHighlight.highlight
+          i.fa.fa-heart-o
+            strong &nbsp;FOSS4G 
+      
+      section.image.image-sailboat(data-bespoke-state='orange')
+        h1.top.right.text-3em
+          span.highlight Iris (v0.1)
+          br
+          | Minimum
+          br
+          | Viable
+          br
+          | Product
+        
+      section.image.image-reidhoffman
+        h1.bottom "If you are not embarrassed by the first version of your product, you've launched too late."
+        | &mdash; Reid Hoffman
+          
+      section
+        h1.text-6em
+          i.fa.fa-forward.fa-2x
+
+      section.image.image-iris-annoucement
 
       section
         h2 Emphatic Slide!

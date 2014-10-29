@@ -1,24 +1,4 @@
 @import 'normalizecss/normalize.css';
-@import url("http://fonts.googleapis.com/css?family=Play:400,700");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-@media print {
-  * {
-    -webkit-print-color-adjust: exact;
-  }
-}
-@page {
-  size: landscape;
-  margin: 0;
-}
-body {
-  color: #fff;
-  font-family: 'Play', sans-serif;
-  background-color: #303030;
-}
 article {
   transition: all 0.6s ease;
   display: none;
@@ -39,41 +19,9 @@ article.bespoke-parent {
     position: static;
   }
 }
-a {
-  transition: all 0.2s ease;
-  color: #f16913;
-  text-decoration: none;
-}
-a:hover {
-  color: #c5540c;
-}
-.highlight {
-  color: #f16913;
-}
-.orange {
-  color: #ffa500;
-}
-.left {
-  width: 100%;
-  text-align: left;
-}
-.right {
-  width: 100%;
-  text-align: right;
-}
-.top {
-  height: 100%;
-  vertical-align: top;
-}
-.text-6em {
-  font-size: 6em;
-}
-.text-3em {
-  font-size: 3em;
-}
-.monospace {
-  font-family: "Courier New", Courier, monospace;
-  background-color: #000;
+article.bespoke-parent.orange {
+  background: #f16913;
+  color: #fff;
 }
 .bespoke-parent {
   position: absolute;
@@ -144,90 +92,6 @@ a:hover {
 .bespoke-backdrop-active {
   opacity: 1;
 }
-/*
-.bespoke-before
- background lighten(primary, 20)
-  -webkit-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  z-index 6
-
-.bespoke-before-3
-  -webkit-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.1
-  z-index 7
-
-.bespoke-before-2
-  -webkit-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.2
-  z-index 8
-
-.bespoke-before-1
-  .content
-    opacity 0.3
-  -webkit-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.3
-  z-index 9
-
-.bespoke-active
-  z-index 10
-
-.bespoke-after
-  background lighten(primary, 20)
-  -webkit-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  z-index 6
-
-.bespoke-after-3
-  .content
-    display none
-  -webkit-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.1
-  z-index 7
-
-.bespoke-after-2
-  .content
-    display none
-  -webkit-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.2
-  z-index 8
-
-.bespoke-after-1
-  .content
-    opacity 0.3
-  -webkit-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.3
-  z-index 9
-*/
 .bespoke-after {
   transform: translateX(640px) translateX(-320px) rotateY(-20deg) translateX(-320px);
 }
@@ -266,11 +130,70 @@ a:hover {
   background: #c5540c;
   transition: width 0.6s ease;
 }
-.emphatic {
-  background: #f16913;
+@import url("http://fonts.googleapis.com/css?family=Play:400,700");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.emphatic-text {
-  color: #303030;
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+}
+@page {
+  size: landscape;
+  margin: 0;
+}
+body {
+  color: #fff;
+  font-family: 'Play', sans-serif;
+  background-color: #303030;
+}
+a {
+  transition: all 0.2s ease;
+  color: #f16913;
+  text-decoration: none;
+}
+a:hover {
+  color: #953f09;
+}
+.highlight {
+  color: #f16913;
+}
+.bgHighlight {
+  background-color: rgba(255,255,255,0.5);
+}
+.orange {
+  color: #ffa500;
+}
+.left {
+  width: 100%;
+  text-align: left;
+}
+.right {
+  width: 100%;
+  text-align: right;
+}
+.top {
+  height: 100%;
+  vertical-align: top;
+}
+.bottom {
+  margin-top: auto;
+}
+.text-6em {
+  font-size: 6em;
+}
+.text-3em {
+  font-size: 3em;
+}
+.text-small {
+  font-size: 0.25em;
+}
+.monospace {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #000;
 }
 .image {
   background-position: center;
@@ -303,4 +226,16 @@ a:hover {
 .image-bubbles {
   background-size: 100% 100%;
   background-image: url("../images/gif/bubbles.gif");
+}
+.image-ingredients {
+  background-size: 100% 100%;
+  background-image: url("../images/ingredients.jpg");
+}
+.image-sailboat {
+  background-size: 100% 100%;
+  background-image: url("../images/sailboat.jpg");
+}
+.image-reidhoffman {
+  background-size: 100% 100%;
+  background-image: url("../images/reidhoffman.jpg");
 }

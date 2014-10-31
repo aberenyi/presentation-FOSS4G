@@ -195,6 +195,10 @@ a:hover {
   font-family: "Courier New", Courier, monospace;
   background-color: #000;
 }
+.cell {
+  display: inline-block;
+  vertical-align: middle;
+}
 .image {
   background-position: center;
   background-repeat: no-repeat;
@@ -238,4 +242,8 @@ a:hover {
 .image-reidhoffman {
   background-size: 100% 100%;
   background-image: url("../images/reidhoffman.jpg");
+}
+.image-replication {
+  background-size: 60%;
+  background-image: url("../images/replication.png");
 }

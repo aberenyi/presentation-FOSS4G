@@ -30,15 +30,16 @@ a
   &:hover
     color darken(secondary, 20)
 
+
 //general styles
 .highlight
   color secondary
 
-.bgHighlight
+.bgHighlight-white
   background-color rgba(255,255,255,0.5)
 
-.orange
-  color orange
+.bgHighlight-primary
+  background-color alpha(primary, 0.5)
 
 .left
   width 100%
@@ -51,6 +52,11 @@ a
 .top
   height 100%
   vertical-align top
+
+.center
+  height 100%
+  margin-top auto
+  vertical-align center
 
 .bottom
   margin-top auto
@@ -72,10 +78,22 @@ a
   display inline-block
   vertical-align middle
 
+.avatar
+  display block
+  margin 0 auto
+  width 120px
+  height 120px
+  border-radius 120px
+
 //images
 .image
   background-position: center
   background-repeat: no-repeat
+
+  &-jockey-ewing
+    background-size 55%
+    background-image url(../images/larryhagman.jpg)
+
   &-iris-annoucement
     background-size 70%
     background-image url(../images/iris_2.2_annoucement.png)
@@ -116,10 +134,60 @@ a
     background-size 100% 100%
     background-image url(../images/reidhoffman.jpg)
 
+  &-under-the-hood
+    background-size cover
+    background-image url(../images/under_the_hood.jpg)
+
   &-replication
-    background-size 60%
+    background-size 55%
     background-image url(../images/replication.png)
 
+  &-modules
+    background-size 45%
+    background-position center 10px
+    background-image url(../images/modules.png)
+
   &-travel-time
-    background-size 100% 100%
+    background-size 86%
     background-image url(../images/travel_time.png)
+
+  &-future
+    background-size 100%
+    background-image url(../images/the-future.jpg)
+
+  &-dashboard
+    background-position center -15px
+    background-size 100%
+    background-image url(../images/gif/dashboard-150.gif)
+
+  &-vespos
+    background-position center -14px
+    background-size 96%
+    background-image url(../images/gif/vespos-150.gif)
+
+  &-dossier
+    background-position center -14px
+    background-size 100%
+    background-image url(../images/gif/dossier-150.gif)
+
+  &-reference-tms
+    background-position center -14px
+    background-size 96%
+    background-image url(../images/gif/reference-tms-100.gif)
+
+  &-mean
+    background-size 100%
+    background-image url(../images/MEAN.jpg)
+
+  &-github-commits
+    background-position center 25px
+    background-size 60%
+    background-image url(../images/github-commits.png)
+
+  &-fight
+    background-size cover
+    background-image url(../images/gif/fight.gif)
+
+  &-webdevelopment
+    background-size 85%
+    background-image url(../images/webdevelopment.png)

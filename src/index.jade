@@ -18,14 +18,6 @@ html
         h3 &mdash; esettanulmány
 
       section
-        h1
-          | Egy&nbsp;
-          span.highlight FOSS4G
-          | &nbsp;komponensenkre épülő projekt-támogatási rendszer az&nbsp;
-          span.highlight (offshore) olaj- és gázipar
-          | ban
-
-      section
         h1.left Berényi Attila
         div.left
           strong térinformatikai fejlesztő @&nbsp;
@@ -41,11 +33,20 @@ html
             i.fa.fa-square-o.fa-stack-2x
             i.fa.fa-send.fa-stack-1x
           a(href="mailto:aberenyi@gislab.hu") aberenyi@gislab.hu
-          
+      
       section
-        h1 Miben különleges az&nbsp;
-          span.highlight energia
-          | ipar?
+        h1
+          | Egy&nbsp;
+          span.highlight FOSS4G
+          |  komponensenkre épülő projekt-támogatási&nbsp;
+          span.highlight keret
+          | rendszer
+          
+      section.image.image-jockey-ewing
+        h1.bottom.bgHighlight-primary
+          span.highlight Miben különleges az&nbsp;
+          span olaj- és gáz
+          span.highlight ipar?
         
       section
         h1
@@ -57,20 +58,23 @@ html
         h1.left
           span.highlight probléma&nbsp;
           i.fa.fa-arrows-h
-          | &nbsp;igény
+          |  igény
         h1.left hol tartunk most (2.2)
         h1.left
-          span.highlight hibák
-          | /
-          span.highlight jövőkép
+          span.highlight jövőkép&nbsp;
+          i.fa.fa-arrows-h
+          |  kihívások
 
       section
         h2.left
+          | Valahol Ausztráliától délre, 2013 elején
+          br
+          br
           | - Ezek a legfrissebb koordináták?
           br
-          | - Nem, azt hittem Pista elküldte neked.
+          | - Nem, azt hittem Bob elküldte neked.
           br
-          | - Pista szabin van...
+          | - Bob szabin van...
           br
 
       section.image.image-uh-oh
@@ -85,36 +89,37 @@ html
 
       section.image.image-real-time-data
         h1.highlight.text-6em Valós idejű adatok
-
+      
       section.image.image-quick-deployment
         h1.highlight.text-6em Határidő
-
-      section.image.image-custom-crs
-        h1.top.text-3em
-          span.highlight.bgHighlight Egyedi vetületek
-
+        
       section.image.image-bubbles(data-bespoke-state='orange')
         h1.text-6em Webtérkép!
 
+      section.image.image-custom-crs
+        h1.top.text-3em
+          span.bgHighlight-primary Egyedi vetületek
+          
       section
-        h2
+        h1
           span.highlight Kiszervezett
           | &nbsp;vagy&nbsp;
           span.highlight házon belüli
           | &nbsp;megoldás?
-        h2 &nbsp;
-        h2
-          | E**I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
+      
+      section
+        h1 E**I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
+          br
           span.monospace > /dev/null
       
       section.image.image-ingredients
-        h1.text-6em.bgHighlight.highlight
+        h1.text-6em.bgHighlight-white.highlight
           i.fa.fa-heart-o
           strong FOSS4G 
       
       section.image.image-sailboat(data-bespoke-state='orange')
         h1.top.right.text-3em
-          span.highlight Iris (v0.1)
+          span.highlight Iris (1.0)
           br
           | Minimum
           br
@@ -126,22 +131,31 @@ html
         h1.bottom "If you are not embarrassed by the first version of your product, you've launched too late."
         | &mdash; Reid Hoffman
           
-      section
-        h1.text-6em
+      section.image.image-github-commits
+        h1.text-6em.bottom
           i.fa.fa-forward.fa-2x
 
-      section.image.image-iris-annoucement
-
+      section
+        img.avatar(src='images/SamRFranklin.jpg')
+        h1 "After nearly two years in the making [...] Iris 2.2 is&nbsp;
+          a(href="http://lr-senergy.com/media-centre/press-releases/2014/lr-senergy-launches-web-access-to-subsea-inspection-data-with-%E2%80%98iris%E2%80%99" target="_blank") out
+          | "
+        span &mdash;&nbsp;
+          a(href='https://twitter.com/SamRFranklin' target="_blank") Sam Franklin
+        
+      section.image.image-under-the-hood
+        h1.bottom.text-3em.highlight.bgHighlight-white A motorháztető alatt...
+        
       section
         img(src="images/rackspace.jpg" width="300")
         h1
-          i.fa.fa.fa-plus-square
+          i.fa.fa-plus-square
         img(src="images/archlinux.png" width="350")
 
       section
         img.cell(src="images/postgis.png" width="350")
         h1.cell
-          i.fa.fa.fa-plus-square
+          i.fa.fa-plus-square
         img.cell(src="images/geoserver.png" width="350")
         
       section.image.image-replication
@@ -151,11 +165,11 @@ html
           div.cell
             img(src="images/nginx.png" height="40")
           h3.cell
-            i.fa.fa.fa-plus-square
+            i.fa.fa-plus-square
           div.cell
             img(src="images/php.png" height="50")
           h3.cell
-            i.fa.fa.fa-plus-square
+            i.fa.fa-plus-square
           div.cell
             img(src="images/nodejs.png" height="50")
             
@@ -164,27 +178,28 @@ html
           div.cell
             img(src="images/jquery.png" height="45")
           h3.cell
-            i.fa.fa.fa-plus-square
+            i.fa.fa-plus-square
           div.cell
             img(src="images/bootstrap.png" height="80") 
           h3.cell
-            i.fa.fa.fa-plus-square
+            i.fa.fa-plus-square
           div.cell
             img(src="images/openlayers.png" height="90")
       
-      section
-        h1 attribútumok megjelenítése
+      section.image.image-modules
+        h1.text-3em.bottom modulok
+          br
+          | sablonok
             
       section.image.image-travel-time
         
-      section
-        h1 grafikonok 
+      section.image.image-dashboard
+        h1.bottom.bgHighlight-white
+          a(href="http://www.highcharts.com/" target="_blank") Highcharts
         
-      section
-        h1 valós idejű hajókövetés
+      section.image.image-vespos
         
-      section
-        h1 dokumentumtár
+      section.image.image-dossier
         
       section
         h1
@@ -193,25 +208,56 @@ html
           div.cell
             img(src="images/tilemill.png" height="50")
           h3.cell
-            i.fa.fa.fa-plus-square
+            i.fa.fa-plus-square
           div.cell
             img(src="images/mapnik.png" height="40")
           h3.cell
-            i.fa.fa.fa-plus-square
+            i.fa.fa-plus-square
           div.cell
             img(src="images/mapproxy.png" height="40")
             
-      section
-        h1 iparági adatok
+      section.image.image-reference-tms
       
       section
         h1 projekt adatok (CAD!)
         
-      section
+      section.image.image-future(data-bespoke-state='orange')
+      
+      section.image.image-fight
+        h1.bottom.text-3em Technológiák harca
         
-
       section
-        h2 Made with
+        div.bgHighlight-white
+          div.cell
+            img(src="images/mongodb.png" width="200")
+          h1.cell 
+            i.highlight.fa.fa-bolt
+          div.cell
+            img.center(src="images/postgresql.png" width="200")
+        br
+        div
+          div.cell
+            img(src="images/php.png" height="50")
+          h1.cell
+            i.highlight.fa.fa-bolt
+          div.cell
+            img(src="images/nodejs.png" height="50")
+        br
+        div
+          div.cell
+            img(src="images/grunt.png" height="80")
+          h1.cell
+            i.highlight.fa.fa-bolt
+          div.cell
+            img(src="images/gulp.png" height="80")
+            
+      section.image.image-webdevelopment
+      
+      section.image.image-mean(data-bespoke-state='white')
+      
+      section
+        h1 Köszönöm a figyelmet!
+        h3 Made with
           a(href='http://markdalgleish.com/projects/bespoke.js/' target="_blank")  Bespoke.js
           |  by
           a(href='http://twitter.com/markdalgleish' target="_blank")  @markdalgleish 

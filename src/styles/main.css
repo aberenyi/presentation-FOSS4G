@@ -1,4 +1,5 @@
-@import url("http://fonts.googleapis.com/css?family=Play:400,700");
+@import url("http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,latin-ext");
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
 @import 'normalizecss/normalize.css';
 article {
   transition: all 0.6s ease;
@@ -38,6 +39,7 @@ article.bespoke-parent.white {
 }
 .bespoke-scale-parent {
   position: absolute;
+  perspective: 600px;
   top: 0;
   left: 0;
   right: 0;
@@ -78,10 +80,6 @@ article.bespoke-parent.white {
   }
 }
 .bespoke-inactive {
-  opacity: 0;
-  pointer-events: none;
-}
-.bespoke-bullet-inactive {
   opacity: 0;
   pointer-events: none;
 }
@@ -135,6 +133,111 @@ article.bespoke-parent.white {
   background: #c5540c;
   transition: width 0.6s ease;
 }
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.image-jockey-ewing {
+  background-size: contain;
+  background-image: url("../images/background/larryhagman.jpg");
+}
+.image-uh-oh {
+  background-size: 100%;
+  background-image: url("../images/gif/uh-oh.gif");
+}
+.image-licence-frustration {
+  background-size: 100% 100%;
+  background-image: url("../images/background/licence-frustration.jpg");
+}
+.image-real-time-data {
+  background-size: cover;
+  background-image: url("../images/background/realtime.jpg");
+}
+.image-quick-deployment {
+  background-size: 100% 100%;
+  background-image: url("../images/gif/skydive.gif");
+}
+.image-bubbles {
+  background-size: 100% 100%;
+  background-image: url("../images/gif/bubbles.gif");
+}
+.image-custom-crs {
+  background-size: cover;
+  background-image: url("../images/background/projections.png");
+}
+.image-ingredients {
+  background-size: cover;
+  background-image: url("../images/background/ingredients.jpg");
+}
+.image-free-beer {
+  background-size: cover;
+  background-image: url("../images/background/freebeer.jpg");
+}
+.image-sailboat {
+  background-size: 100% 100%;
+  background-image: url("../images/background/sailboat.jpg");
+}
+.image-reidhoffman {
+  background-size: 100% 100%;
+  background-image: url("../images/background/reidhoffman.jpg");
+}
+.image-github-commits {
+  background-position: center 25px;
+  background-image: url("../images/github-commits.png");
+}
+.image-under-the-hood {
+  background-size: cover;
+  background-image: url("../images/background/under_the_hood.jpg");
+}
+.image-replication {
+  background-size: contain;
+  background-image: url("../images/replication.png");
+}
+.image-modules {
+  background-size: 45%;
+  background-position: center 10px;
+  background-image: url("../images/modules.png");
+}
+.image-travel-time {
+  background-size: contain;
+  background-image: url("../images/background/travel_time.png");
+}
+.image-dashboard {
+  background-position: center -15px;
+  background-size: 100%;
+  background-image: url("../images/gif/dashboard-150.gif");
+}
+.image-vespos {
+  background-position: center -14px;
+  background-size: 96%;
+  background-image: url("../images/gif/vespos-150.gif");
+}
+.image-dossier {
+  background-position: center -14px;
+  background-size: 100%;
+  background-image: url("../images/gif/dossier-150.gif");
+}
+.image-reference-tms {
+  background-position: center -14px;
+  background-size: 96%;
+  background-image: url("../images/gif/reference-tms-100.gif");
+}
+.image-future {
+  background-size: cover;
+  background-image: url("../images/background/the-future.jpg");
+}
+.image-webdevelopment {
+  background-size: contain;
+  background-image: url("../images/background/webdevelopment.png");
+}
+.image-fight {
+  background-size: cover;
+  background-image: url("../images/gif/fight.gif");
+}
+.image-mean {
+  background-size: 100%;
+  background-image: url("../images/MEAN.jpg");
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -155,7 +258,7 @@ body {
   background-color: #303030;
 }
 a {
-  transition: all 0.2s ease;
+  transition: all link_transition_length link_transition_easing;
   color: #f16913;
   text-decoration: none;
 }
@@ -214,110 +317,4 @@ a:hover {
   width: 120px;
   height: 120px;
   border-radius: 120px;
-}
-.image {
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.image-jockey-ewing {
-  background-size: 55%;
-  background-image: url("../images/larryhagman.jpg");
-}
-.image-iris-annoucement {
-  background-size: 70%;
-  background-image: url("../images/iris_2.2_annoucement.png");
-}
-.image-uh-oh {
-  background-size: 100%;
-  background-image: url("../images/gif/uh-oh.gif");
-}
-.image-licence-frustration {
-  background-size: 100% 100%;
-  background-image: url("../images/licence-frustration.jpg");
-}
-.image-real-time-data {
-  background-size: 100% 100%;
-  background-image: url("../images/realtime.jpg");
-}
-.image-quick-deployment {
-  background-size: 100% 100%;
-  background-image: url("../images/gif/skydive.gif");
-}
-.image-custom-crs {
-  background-size: 100%;
-  background-image: url("../images/projections.png");
-}
-.image-bubbles {
-  background-size: 100% 100%;
-  background-image: url("../images/gif/bubbles.gif");
-}
-.image-ingredients {
-  background-size: 100% 100%;
-  background-image: url("../images/ingredients.jpg");
-}
-.image-sailboat {
-  background-size: 100% 100%;
-  background-image: url("../images/sailboat.jpg");
-}
-.image-reidhoffman {
-  background-size: 100% 100%;
-  background-image: url("../images/reidhoffman.jpg");
-}
-.image-under-the-hood {
-  background-size: cover;
-  background-image: url("../images/under_the_hood.jpg");
-}
-.image-replication {
-  background-size: 55%;
-  background-image: url("../images/replication.png");
-}
-.image-modules {
-  background-size: 45%;
-  background-position: center 10px;
-  background-image: url("../images/modules.png");
-}
-.image-travel-time {
-  background-size: 86%;
-  background-image: url("../images/travel_time.png");
-}
-.image-future {
-  background-size: 100%;
-  background-image: url("../images/the-future.jpg");
-}
-.image-dashboard {
-  background-position: center -15px;
-  background-size: 100%;
-  background-image: url("../images/gif/dashboard-150.gif");
-}
-.image-vespos {
-  background-position: center -14px;
-  background-size: 96%;
-  background-image: url("../images/gif/vespos-150.gif");
-}
-.image-dossier {
-  background-position: center -14px;
-  background-size: 100%;
-  background-image: url("../images/gif/dossier-150.gif");
-}
-.image-reference-tms {
-  background-position: center -14px;
-  background-size: 96%;
-  background-image: url("../images/gif/reference-tms-100.gif");
-}
-.image-mean {
-  background-size: 100%;
-  background-image: url("../images/MEAN.jpg");
-}
-.image-github-commits {
-  background-position: center 25px;
-  background-size: 60%;
-  background-image: url("../images/github-commits.png");
-}
-.image-fight {
-  background-size: cover;
-  background-image: url("../images/gif/fight.gif");
-}
-.image-webdevelopment {
-  background-size: 85%;
-  background-image: url("../images/webdevelopment.png");
 }

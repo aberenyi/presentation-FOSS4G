@@ -5,7 +5,6 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title Webtérképek az energiaiparban
     link(rel='stylesheet', type='text/css', href='build/build.css')
-    link(rel='stylesheet', type='text/css', href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
 
   body
     article
@@ -55,15 +54,18 @@ html
         div.text-small *az iparágban dolgozók véleménye ettől eltérhet
 
       section
-        h1.left
-          span.highlight probléma&nbsp;
-          i.fa.fa-arrows-h
-          |  igény
-        h1.left hol tartunk most (2.2)
-        h1.left
-          span.highlight jövőkép&nbsp;
-          i.fa.fa-arrows-h
-          |  kihívások
+        .left
+          h1
+            | múlt &mdash;&nbsp;
+            span.highlight probléma&nbsp;
+            i.fa.fa-arrows-h
+            |  igény
+          h1.highlight jelen
+          h1
+            | jövő &mdash;&nbsp;
+            span.highlight kihívások 
+            i.fa.fa-arrows-h
+            |  fejlesztési irány
 
       section
         h2.left
@@ -80,33 +82,28 @@ html
       section.image.image-uh-oh
         h1.right.text-6em.highlight Ajjaj
 
-      section.image.image-licence-frustration
-        h1.highlight.text-6em
-          br
-          | Licensz
-          br
-          | problémák
+      section.image.image-facepalm
+        .right.top
+          img(src="images/no_licence.png" height="140")
 
-      section.image.image-real-time-data
-        h1.highlight.text-6em Valós idejű adatok
-      
-      section.image.image-quick-deployment
-        h1.highlight.text-6em Határidő
-        
+      section.image.image-realtime
+
+      section.image.image-countdown
+
       section.image.image-bubbles(data-bespoke-state='orange')
         h1.text-6em Webtérkép!
 
       section.image.image-custom-crs
         h1.top.text-3em
           span.bgHighlight-primary Egyedi vetületek
-          
+
       section
         h1
           span.highlight Kiszervezett
           | &nbsp;vagy&nbsp;
           span.highlight házon belüli
           | &nbsp;megoldás?
-      
+
       section
         h1 E**I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
           br
@@ -116,6 +113,11 @@ html
         h1.text-6em.bgHighlight-white.highlight
           i.fa.fa-heart-o
           strong FOSS4G 
+          
+      section.image.image-free-beer
+        h1.bottom Steve Feldman:
+          a(href="http://knowwhereconsulting.co.uk/there-is-no-such-thing-as-a-free-lunch/" target="_blank") 
+            | There is no such thing as a free lunch
       
       section.image.image-sailboat(data-bespoke-state='orange')
         h1.top.right.text-3em
@@ -132,7 +134,7 @@ html
         | &mdash; Reid Hoffman
           
       section.image.image-github-commits
-        h1.text-6em.bottom
+        h1.text-6em.bottom.highlight
           i.fa.fa-forward.fa-2x
 
       section
@@ -161,18 +163,21 @@ html
       section.image.image-replication
       
       section
-        div
+        div(style="border-bottom: 1px solid #aaa; padding-bottom: 25px;")
           div.cell
             img(src="images/nginx.png" height="40")
           h3.cell
             i.fa.fa-plus-square
           div.cell
-            img(src="images/php.png" height="50")
-          h3.cell
-            i.fa.fa-plus-square
+            img(src="images/php.png" height="50") 
+        div(style="margin-top: 25px")
           div.cell
             img(src="images/nodejs.png" height="50")
-            
+          h3.cell
+            i.fa.fa-plus-square
+          div.cell.bottom
+            img(src="../images/python.png" height="55")
+
       section
         div
           div.cell
@@ -200,6 +205,9 @@ html
       section.image.image-vespos
         
       section.image.image-dossier
+      
+      section
+        h1 map-video interaction
         
       section
         h1
@@ -222,6 +230,8 @@ html
         h1 projekt adatok (CAD!)
         
       section.image.image-future(data-bespoke-state='orange')
+      
+      section.image.image-webdevelopment(data-bespoke-state='white')
       
       section.image.image-fight
         h1.bottom.text-3em Technológiák harca
@@ -250,10 +260,8 @@ html
             i.highlight.fa.fa-bolt
           div.cell
             img(src="images/gulp.png" height="80")
-            
-      section.image.image-webdevelopment
-      
-      section.image.image-mean(data-bespoke-state='white')
+
+      section.image.image-mean
       
       section
         h1 Köszönöm a figyelmet!

@@ -1,3 +1,5 @@
+@import variables
+
 article
   transition: all slide_transition_length slide_transition_easing
   display: none
@@ -9,7 +11,7 @@ article
     left: 0
     right: 0
     overflow: hidden
-    perspective: 600px
+    perspective 600px
     @media print
       overflow: visible
       position: static
@@ -32,6 +34,7 @@ article
 
 .bespoke-scale-parent
   position: absolute
+  perspective 600px
   top: 0
   left: 0
   right: 0
@@ -74,10 +77,6 @@ article
   opacity: 0
   pointer-events: none
 
-.bespoke-bullet-inactive
-  opacity: 0
-  pointer-events: none
-
 .bespoke-backdrop
   position: absolute
   top: 0
@@ -90,98 +89,13 @@ article
 .bespoke-backdrop-active
   opacity: 1
 
-/*
-.bespoke-before
- background lighten(primary, 20)
-  -webkit-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-270px) rotateY(45deg) scale(slide_transition_scale)
-  z-index 6
-
-.bespoke-before-3
-  -webkit-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-230px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.1
-  z-index 7
-
-.bespoke-before-2
-  -webkit-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-190px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.2
-  z-index 8
-
-.bespoke-before-1
-  .content
-    opacity 0.3
-  -webkit-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -moz-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -ms-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  -o-transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  transform translateX(-150px) rotateY(45deg) scale(slide_transition_scale)
-  opacity 0.3
-  z-index 9
-
-.bespoke-active
-  z-index 10
-
 .bespoke-after
-  background lighten(primary, 20)
-  -webkit-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(270px) rotateY(-45deg) scale(slide_transition_scale)
-  z-index 6
+  transform translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
+  //-moz-transform translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) translateX(slide_width / -2) rotate(-0.01deg)
 
-.bespoke-after-3
-  .content
-    display none
-  -webkit-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(230px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.1
-  z-index 7
-
-.bespoke-after-2
-  .content
-    display none
-  -webkit-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(190px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.2
-  z-index 8
-
-.bespoke-after-1
-  .content
-    opacity 0.3
-  -webkit-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -moz-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -ms-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  -o-transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  transform translateX(150px) rotateY(-45deg) scale(slide_transition_scale)
-  opacity 0.3
-  z-index 9
-*/
-
-//.bespoke-before
-.bespoke-after
-  transform: translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
-
-//.bespoke-after
 .bespoke-before
-  transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
+  transform translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
+  //-moz-transform translateX(slide_transition_nudge_x) translateX(slide_width / 2) translateX(slide_width / 2)
   @media print
     transform: none
 
@@ -194,7 +108,6 @@ article
 .bespoke-active
   opacity: 1
   transition-delay: .2s
-
 
 //progress bar
 .bespoke-progress-parent

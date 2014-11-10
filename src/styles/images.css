@@ -1,0 +1,105 @@
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.image-jockey-ewing {
+  background-size: contain;
+  background-image: url("../images/background/larryhagman.jpg");
+}
+.image-uh-oh {
+  background-size: 100%;
+  background-image: url("../images/gif/uh-oh.gif");
+}
+.image-facepalm {
+  background-size: cover;
+  background-image: url("../images/background/facepalm.png");
+}
+.image-realtime {
+  background-size: contain;
+  background-image: url("../images/background/realtime.png");
+}
+.image-countdown {
+  background-size: 100% 100%;
+  background-image: url("../images/gif/countdown.gif");
+}
+.image-bubbles {
+  background-size: contain;
+  background-image: url("../images/gif/bubbles.gif");
+}
+.image-custom-crs {
+  background-size: cover;
+  background-image: url("../images/background/projections.png");
+}
+.image-ingredients {
+  background-size: cover;
+  background-image: url("../images/background/ingredients.jpg");
+}
+.image-free-beer {
+  background-size: cover;
+  background-image: url("../images/background/freebeer.jpg");
+}
+.image-sailboat {
+  background-size: 100% 100%;
+  background-image: url("../images/background/sailboat.jpg");
+}
+.image-reidhoffman {
+  background-size: 100% 100%;
+  background-image: url("../images/background/reidhoffman.jpg");
+}
+.image-github-commits {
+  background-position: center 25px;
+  background-image: url("../images/github-commits.png");
+}
+.image-under-the-hood {
+  background-size: cover;
+  background-image: url("../images/background/under_the_hood.jpg");
+}
+.image-replication {
+  background-size: contain;
+  background-image: url("../images/replication.png");
+}
+.image-modules {
+  background-size: 45%;
+  background-position: center 10px;
+  background-image: url("../images/modules.png");
+}
+.image-travel-time {
+  background-size: contain;
+  background-image: url("../images/background/travel_time.png");
+}
+.image-dashboard {
+  background-position: center -15px;
+  background-size: 100%;
+  background-image: url("../images/gif/dashboard-150.gif");
+}
+.image-vespos {
+  background-position: center -14px;
+  background-size: 96%;
+  background-image: url("../images/gif/vespos-150.gif");
+}
+.image-dossier {
+  background-position: center -14px;
+  background-size: 100%;
+  background-image: url("../images/gif/dossier-150.gif");
+}
+.image-reference-tms {
+  background-position: center -14px;
+  background-size: 96%;
+  background-image: url("../images/gif/reference-tms-100.gif");
+}
+.image-future {
+  background-size: cover;
+  background-image: url("../images/background/the-future.jpg");
+}
+.image-webdevelopment {
+  background-size: contain;
+  background-image: url("../images/background/webdevelopment.png");
+}
+.image-fight {
+  background-size: cover;
+  background-image: url("../images/gif/fight.gif");
+}
+.image-mean {
+  background-size: 100%;
+  background-image: url("../images/mean.png");
+}

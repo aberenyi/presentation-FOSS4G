@@ -15,6 +15,7 @@ var pkg = require('./package.json'),
   opn = require('opn'),
   ghpages = require('gh-pages'),
   path = require('path'),
+  imageop = require('gulp-image-optimization'),
   isDist = process.argv.indexOf('serve') === -1;
 
 gulp.task('js', ['clean:js'], function() {
@@ -55,6 +56,14 @@ gulp.task('images', ['clean:images'], function() {
   return gulp.src('src/images/**/*')
     .pipe(gulp.dest('dist/images'))
     .pipe(connect.reload());
+});
+
+gulp.task('images-opt', function(cb) {
+  gulp.src(['src/images/*.png','src/images/*.jpg','src/images/gif/*.gif']).pipe(imageop({
+    optimizationLevel: 9,
+    progressive: true,
+    interlaced: true
+  })).pipe(gulp.dest('dist/images-opt')).on('end', cb).on('error', cb);
 });
 
 gulp.task('clean', function() {

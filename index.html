@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Webtérképek az energiaiparban</title>
     <link rel="stylesheet" type="text/css" href="build/build.css">
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   </head>
   <body>
     <article>
@@ -29,9 +28,11 @@
         <div class="text-small">*az iparágban dolgozók véleménye ettől eltérhet</div>
       </section>
       <section>
-        <h1 class="left"><span class="highlight">probléma&nbsp;</span><i class="fa fa-arrows-h"></i> igény</h1>
-        <h1 class="left">hol tartunk most (2.2)</h1>
-        <h1 class="left"><span class="highlight">jövőkép&nbsp;</span><i class="fa fa-arrows-h"></i> kihívások</h1>
+        <div class="left">
+          <h1>múlt &mdash;&nbsp;<span class="highlight">probléma&nbsp;</span><i class="fa fa-arrows-h"></i> igény</h1>
+          <h1 class="highlight">jelen</h1>
+          <h1>jövő &mdash;&nbsp;<span class="highlight">kihívások </span><i class="fa fa-arrows-h"></i> fejlesztési irány</h1>
+        </div>
       </section>
       <section>
         <h2 class="left">Valahol Ausztráliától délre, 2013 elején<br><br>- Ezek a legfrissebb koordináták?<br>- Nem, azt hittem Bob elküldte neked.<br>- Bob szabin van...<br></h2>
@@ -39,15 +40,11 @@
       <section class="image image-uh-oh">
         <h1 class="right text-6em highlight">Ajjaj</h1>
       </section>
-      <section class="image image-licence-frustration">
-        <h1 class="highlight text-6em"><br>Licensz<br>problémák</h1>
+      <section class="image image-facepalm">
+        <div class="right top"><img src="images/no_licence.png" height="140"></div>
       </section>
-      <section class="image image-real-time-data">
-        <h1 class="highlight text-6em">Valós idejű adatok</h1>
-      </section>
-      <section class="image image-quick-deployment">
-        <h1 class="highlight text-6em">Határidő</h1>
-      </section>
+      <section class="image image-realtime"></section>
+      <section class="image image-countdown"></section>
       <section data-bespoke-state="orange" class="image image-bubbles">
         <h1 class="text-6em">Webtérkép!</h1>
       </section>
@@ -63,6 +60,11 @@
       <section class="image image-ingredients">
         <h1 class="text-6em bgHighlight-white highlight"><i class="fa fa-heart-o"></i><strong>FOSS4G </strong></h1>
       </section>
+      <section class="image image-free-beer">
+        <h1 class="bottom">Steve Feldman:<a href="http://knowwhereconsulting.co.uk/there-is-no-such-thing-as-a-free-lunch/" target="_blank">
+             
+            There is no such thing as a free lunch</a></h1>
+      </section>
       <section data-bespoke-state="orange" class="image image-sailboat">
         <h1 class="top right text-3em"><span class="highlight">Iris (1.0)</span><br>Minimum<br>Viable<br>Product</h1>
       </section>
@@ -70,7 +72,7 @@
         <h1 class="bottom">"If you are not embarrassed by the first version of your product, you've launched too late."</h1>&mdash; Reid Hoffman
       </section>
       <section class="image image-github-commits">
-        <h1 class="text-6em bottom"><i class="fa fa-forward fa-2x"></i></h1>
+        <h1 class="text-6em bottom highlight"><i class="fa fa-forward fa-2x"></i></h1>
       </section>
       <section><img src="images/SamRFranklin.jpg" class="avatar">
         <h1>"After nearly two years in the making [...] Iris 2.2 is&nbsp;<a href="http://lr-senergy.com/media-centre/press-releases/2014/lr-senergy-launches-web-access-to-subsea-inspection-data-with-%E2%80%98iris%E2%80%99" target="_blank">out</a>"</h1><span>&mdash;&nbsp;<a href="https://twitter.com/SamRFranklin" target="_blank">Sam Franklin</a></span>
@@ -86,12 +88,15 @@
       </section>
       <section class="image image-replication"></section>
       <section>
-        <div>
+        <div style="border-bottom: 1px solid #aaa; padding-bottom: 25px;">
           <div class="cell"><img src="images/nginx.png" height="40"></div>
           <h3 class="cell"><i class="fa fa-plus-square"></i></h3>
           <div class="cell"><img src="images/php.png" height="50"></div>
-          <h3 class="cell"><i class="fa fa-plus-square"></i></h3>
+        </div>
+        <div style="margin-top: 25px">
           <div class="cell"><img src="images/nodejs.png" height="50"></div>
+          <h3 class="cell"><i class="fa fa-plus-square"></i></h3>
+          <div class="cell bottom"><img src="../images/python.png" height="55"></div>
         </div>
       </section>
       <section>
@@ -113,6 +118,9 @@
       <section class="image image-vespos"></section>
       <section class="image image-dossier"></section>
       <section>
+        <h1>map-video interaction</h1>
+      </section>
+      <section>
         <h1><a href="http://en.wikipedia.org/wiki/Tile_Map_Service">TMS</a></h1>
         <div>
           <div class="cell"><img src="images/tilemill.png" height="50"></div>
@@ -127,13 +135,14 @@
         <h1>projekt adatok (CAD!)</h1>
       </section>
       <section data-bespoke-state="orange" class="image image-future"></section>
+      <section data-bespoke-state="white" class="image image-webdevelopment"></section>
       <section class="image image-fight">
         <h1 class="bottom text-3em">Technológiák harca</h1>
       </section>
       <section>
         <div class="bgHighlight-white">
           <div class="cell"><img src="images/mongodb.png" width="200"></div>
-          <h1 class="cell"><i class="highlight fa fa-bolt"></i></h1>
+          <h1 class="cell"> <i class="highlight fa fa-bolt"></i></h1>
           <div class="cell"><img src="images/postgresql.png" width="200" class="center"></div>
         </div><br>
         <div>
@@ -147,8 +156,7 @@
           <div class="cell"><img src="images/gulp.png" height="80"></div>
         </div>
       </section>
-      <section class="image image-webdevelopment"></section>
-      <section data-bespoke-state="white" class="image image-mean"></section>
+      <section class="image image-mean"></section>
       <section>
         <h1>Köszönöm a figyelmet!</h1>
         <h3>Made with<a href="http://markdalgleish.com/projects/bespoke.js/" target="_blank"> Bespoke.js</a> by<a href="http://twitter.com/markdalgleish" target="_blank"> @markdalgleish </a></h3>

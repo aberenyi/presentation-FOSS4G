@@ -94,9 +94,11 @@ article.bespoke-parent.white {
 }
 .bespoke-after {
   transform: translateX(640px) translateX(-320px) rotateY(-20deg) translateX(-320px);
+  -moz-transform: translateX(640px) translateX(-320px) translateX(-320px) rotate(-0.01deg);
 }
 .bespoke-before {
   transform: translateX(-640px) translateX(320px) rotateY(20deg) translateX(320px);
+  -moz-transform: translateX(-640px) translateX(320px) translateX(320px);
 }
 @media print {
   .bespoke-before {

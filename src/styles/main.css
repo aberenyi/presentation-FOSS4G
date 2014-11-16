@@ -145,20 +145,20 @@ article.bespoke-parent.white {
   background-size: 100%;
   background-image: url("../images/gif/uh-oh.gif");
 }
-.image-licence-frustration {
-  background-size: 100% 100%;
-  background-image: url("../images/background/licence-frustration.jpg");
-}
-.image-real-time-data {
+.image-facepalm {
   background-size: cover;
-  background-image: url("../images/background/realtime.jpg");
+  background-image: url("../images/background/facepalm.png");
 }
-.image-quick-deployment {
+.image-realtime {
+  background-size: contain;
+  background-image: url("../images/background/realtime.png");
+}
+.image-countdown {
   background-size: 100% 100%;
-  background-image: url("../images/gif/skydive.gif");
+  background-image: url("../images/gif/countdown.gif");
 }
 .image-bubbles {
-  background-size: 100% 100%;
+  background-size: contain;
   background-image: url("../images/gif/bubbles.gif");
 }
 .image-custom-crs {
@@ -236,7 +236,7 @@ article.bespoke-parent.white {
 }
 .image-mean {
   background-size: 100%;
-  background-image: url("../images/MEAN.jpg");
+  background-image: url("../images/mean.png");
 }
 * {
   box-sizing: border-box;

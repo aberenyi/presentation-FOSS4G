@@ -6,7 +6,6 @@ html
     title Webtérképek az energiaiparban
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
-  body
     article
       section
         h1
@@ -19,8 +18,10 @@ html
       section
         h1.left Berényi Attila
         div.left
-          strong térinformatikai fejlesztő @&nbsp;
-            a(href="http://gislab.hu" target="_blank") GISLab
+          div.cell térinformatikai fejlesztő @&nbsp;
+          div.cell
+            a(href="http://gislab.hu" target="_blank")
+              img(src="images/gislab.png")
         br
         div.left
           span.fa-stack
@@ -32,26 +33,22 @@ html
             i.fa.fa-square-o.fa-stack-2x
             i.fa.fa-send.fa-stack-1x
           a(href="mailto:aberenyi@gislab.hu") aberenyi@gislab.hu
-      
+
       section
+        img(src="images/lr_senergy.png")
         h1
           | Egy&nbsp;
           span.highlight FOSS4G
           |  komponensenkre épülő projekt-támogatási&nbsp;
           span.highlight keret
-          | rendszer
-          
+          | rendszer az&nbsp;
+          span.highlight olaj- és gáz
+          | iparban
+
       section.image.image-jockey-ewing
         h1.bottom.bgHighlight-primary
-          span.highlight Miben különleges az&nbsp;
-          span olaj- és gáz
-          span.highlight ipar?
-        
-      section
-        h1
-          span.highlight semmi
-          | ben*
-        div.text-small *az iparágban dolgozók véleménye ettől eltérhet
+          span.highlight Olaj- és gáz
+          | ipar?!
 
       section
         .left
@@ -60,7 +57,7 @@ html
             span.highlight probléma&nbsp;
             i.fa.fa-arrows-h
             |  igény
-          h1.highlight jelen
+          h1 jelen
           h1
             | jövő &mdash;&nbsp;
             span.highlight kihívások 
@@ -85,17 +82,20 @@ html
       section.image.image-facepalm
         .right.top
           img(src="images/no_licence.png" height="140")
+        h1.bottom.text-3em Licensz problémák
 
       section.image.image-realtime
-
-      section.image.image-countdown
+        h1.bgHighlight-primary.text-3em Valós idejű adatok
 
       section.image.image-bubbles(data-bespoke-state='orange')
         h1.text-6em Webtérkép!
 
+      section.image.image-countdown
+        h1.text-6em.bgHighlight-primary Határidő
+
       section.image.image-custom-crs
         h1.top.text-3em
-          span.bgHighlight-primary Egyedi vetületek
+          span.bgHighlight-primary Vetületek
 
       section
         h1
@@ -105,20 +105,29 @@ html
           | &nbsp;megoldás?
 
       section
-        h1 E**I A*cG*S Server/Online === jelentős időráfordás, magas költségigény, licensz korlátozások&nbsp;
-          br
-          span.monospace > /dev/null
-      
+        h1 E**I A*cG*S Server/Online
+        div
+          div.cell
+            h1
+              i.fa.fa-2x.fa-clock-o &nbsp;
+          div.cell
+            h1
+              i.fa.fa-2x.fa-copyright &nbsp;
+          div.cell
+            h1
+              i.fa.fa-2x.fa-gbp &nbsp;
+        h1.monospace > /dev/null
+
       section.image.image-ingredients
         h1.text-6em.bgHighlight-white.highlight
           i.fa.fa-heart-o
           strong FOSS4G 
-          
+
       section.image.image-free-beer
-        h1.bottom Steve Feldman:
-          a(href="http://knowwhereconsulting.co.uk/there-is-no-such-thing-as-a-free-lunch/" target="_blank") 
+        h1.bottom Steven Feldman 
+          a(href="http://knowwhereconsulting.co.uk/there-is-no-such-thing-as-a-free-lunch/" target="_blank")
             | There is no such thing as a free lunch
-      
+
       section.image.image-sailboat(data-bespoke-state='orange')
         h1.top.right.text-3em
           span.highlight Iris (1.0)
@@ -128,11 +137,11 @@ html
           | Viable
           br
           | Product
-        
+
       section.image.image-reidhoffman
         h1.bottom "If you are not embarrassed by the first version of your product, you've launched too late."
         | &mdash; Reid Hoffman
-          
+
       section.image.image-github-commits
         h1.text-6em.bottom.highlight
           i.fa.fa-forward.fa-2x
@@ -144,10 +153,10 @@ html
           | "
         span &mdash;&nbsp;
           a(href='https://twitter.com/SamRFranklin' target="_blank") Sam Franklin
-        
+
       section.image.image-under-the-hood
         h1.bottom.text-3em.highlight.bgHighlight-white A motorháztető alatt...
-        
+
       section
         img(src="images/rackspace.jpg" width="300")
         h1
@@ -159,24 +168,17 @@ html
         h1.cell
           i.fa.fa-plus-square
         img.cell(src="images/geoserver.png" width="350")
-        
+
       section.image.image-replication
-      
+
       section
-        div(style="border-bottom: 1px solid #aaa; padding-bottom: 25px;")
+        div
           div.cell
             img(src="images/nginx.png" height="40")
           h3.cell
             i.fa.fa-plus-square
           div.cell
-            img(src="images/php.png" height="50") 
-        div(style="margin-top: 25px")
-          div.cell
-            img(src="images/nodejs.png" height="50")
-          h3.cell
-            i.fa.fa-plus-square
-          div.cell.bottom
-            img(src="images/python.png" height="55")
+            img(src="images/php.png" height="50")
 
       section
         div
@@ -185,30 +187,30 @@ html
           h3.cell
             i.fa.fa-plus-square
           div.cell
-            img(src="images/bootstrap.png" height="80") 
+            img(src="images/bootstrap.png" height="80")
           h3.cell
             i.fa.fa-plus-square
           div.cell
             img(src="images/openlayers.png" height="90")
-      
+
       section.image.image-modules
         h1.text-3em.bottom modulok
           br
           | sablonok
-            
+
       section.image.image-travel-time
-        
+
       section.image.image-dashboard
         h1.bottom.bgHighlight-white
           a(href="http://www.highcharts.com/" target="_blank") Highcharts
-        
+
       section.image.image-vespos
-        
+
       section.image.image-dossier
-      
+
       section
         h1 map-video interaction
-        
+
       section
         h1
           a(href="http://en.wikipedia.org/wiki/Tile_Map_Service") TMS
@@ -223,24 +225,34 @@ html
             i.fa.fa-plus-square
           div.cell
             img(src="images/mapproxy.png" height="40")
-            
+
       section.image.image-reference-tms
-      
-      section
-        h1 projekt adatok (CAD!)
-        
+
+      section.image.image-tms-cad
+
       section.image.image-future(data-bespoke-state='orange')
+
+      section.image.image-unicorn1(data-bespoke-state='white')
+        h1.bottom.bgHighlight-white Webfejlesztés a közelmúltig...
+
+      section.image.image-browsers1(data-bespoke-state='white')
+
+      section.image.image-unicorn2(data-bespoke-state='white')
+        h1.bottom.right
+          span.bgHighlight-white ...és napjainkban
+
+      section.image.image-browsers2(data-bespoke-state='white')
       
       section.image.image-webdevelopment(data-bespoke-state='white')
       
       section.image.image-fight
         h1.bottom.text-3em Technológiák harca
-        
+
       section
         div.bgHighlight-white
           div.cell
             img(src="images/mongodb.png" width="200")
-          h1.cell 
+          h1.cell
             i.highlight.fa.fa-bolt
           div.cell
             img.center(src="images/postgresql.png" width="200")
@@ -260,14 +272,27 @@ html
             i.highlight.fa.fa-bolt
           div.cell
             img(src="images/gulp.png" height="80")
+        h2 . . .
 
-      section.image.image-mean
-      
+      section.image.image-lightbulb
+        h1.top.text-3em Új megoldások
+        
+      section
+        div
+          div.cell
+            img(src="images/ol3.png")
+          div.cell
+            img(src="images/webgl.png" height="100")
+          div.cell
+            img(src="images/cesium.png" height="100")
+        h2 . . .
+
       section
         h1 Köszönöm a figyelmet!
         h3 Made with
           a(href='http://markdalgleish.com/projects/bespoke.js/' target="_blank")  Bespoke.js
           |  by
           a(href='http://twitter.com/markdalgleish' target="_blank")  @markdalgleish 
-
+  body
     script(src='build/build.js')
+

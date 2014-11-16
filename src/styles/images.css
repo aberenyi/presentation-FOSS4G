@@ -87,9 +87,30 @@
   background-size: 96%;
   background-image: url("../images/gif/reference-tms-100.gif");
 }
+.image-tms-cad {
+  background-position: center -14px;
+  background-size: 96%;
+  background-image: url("../images/gif/tms-cad-100.gif");
+}
 .image-future {
   background-size: cover;
   background-image: url("../images/background/the-future.jpg");
+}
+.image-unicorn1 {
+  background-size: contain;
+  background-image: url("../images/background/unicorn1.png");
+}
+.image-browsers1 {
+  background-size: contain;
+  background-image: url("../images/background/browsers1.jpg");
+}
+.image-unicorn2 {
+  background-size: contain;
+  background-image: url("../images/background/unicorn2.png");
+}
+.image-browsers2 {
+  background-size: contain;
+  background-image: url("../images/background/browsers2.jpg");
 }
 .image-webdevelopment {
   background-size: contain;
@@ -99,7 +120,7 @@
   background-size: cover;
   background-image: url("../images/gif/fight.gif");
 }
-.image-mean {
-  background-size: 100%;
-  background-image: url("../images/mean.png");
+.image-lightbulb {
+  background-size: contain;
+  background-image: url("../images/background/lightbulb.jpg");
 }

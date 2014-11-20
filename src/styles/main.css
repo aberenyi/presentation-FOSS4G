@@ -219,6 +219,11 @@ article.bespoke-parent.white {
   background-size: 100%;
   background-image: url("../images/gif/dossier-150.gif");
 }
+.image-video-map-interaction {
+  background-position: center -14px;
+  background-size: 100%;
+  background-image: url("../images/gif/video-map-interaction-150.gif");
+}
 .image-reference-tms {
   background-position: center -14px;
   background-size: 96%;
@@ -268,6 +273,23 @@ article.bespoke-parent.white {
 .image-geospatial {
   background-size: cover;
   background-image: url("../images/background/geospatial.png");
+}
+aside {
+  display: none;
+}
+body.notes aside {
+  display: block;
+}
+body.notes .bespoke-slide {
+  width: 1600px;
+  margin-left: -800px;
+}
+body.notes .bespoke-slide > div.content,
+body.notes .bespoke-slide > aside {
+  width: 760px;
+}
+body.notes .bespoke-slide > aside {
+  margin-left: 40px;
 }
 * {
   box-sizing: border-box;

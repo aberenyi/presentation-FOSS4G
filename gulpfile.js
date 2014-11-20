@@ -15,7 +15,11 @@ var pkg = require('./package.json'),
   opn = require('opn'),
   ghpages = require('gh-pages'),
   path = require('path'),
-  imageop = require('gulp-image-optimization'),
+  bespokeSyncMiddleware = require('bespoke-sync/server')({
+    log: false,
+    ssePath: '/sse-slides/',
+    xhrPath: '/slide/'
+  }),
   isDist = process.argv.indexOf('serve') === -1;
 
 gulp.task('js', ['clean:js'], function() {
@@ -58,14 +62,6 @@ gulp.task('images', ['clean:images'], function() {
     .pipe(connect.reload());
 });
 
-gulp.task('images-opt', function(cb) {
-  gulp.src(['src/images/*.png','src/images/*.jpg','src/images/gif/*.gif']).pipe(imageop({
-    optimizationLevel: 9,
-    progressive: true,
-    interlaced: true
-  })).pipe(gulp.dest('dist/images-opt')).on('end', cb).on('error', cb);
-});
-
 gulp.task('clean', function() {
   return gulp.src('dist')
     .pipe(rimraf());
@@ -94,7 +90,14 @@ gulp.task('clean:images', function() {
 gulp.task('connect', ['build'], function(done) {
   connect.server({
     root: 'dist',
-    livereload: true
+    livereload: true,
+    middleware: function()
+    {
+      return [function(req, res, next)
+      {
+        bespokeSyncMiddleware(req, res, function() { next();});
+      }]
+    }
   });
 
   opn('http://localhost:8080', done);

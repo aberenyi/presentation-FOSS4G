@@ -245,6 +245,10 @@ article.bespoke-parent.white {
   background-size: contain;
   background-image: url("../images/background/browsers1.jpg");
 }
+.image-html5-css3 {
+  background-size: cover;
+  background-image: url("../images/background/html5-css3.jpg");
+}
 .image-unicorn2 {
   background-size: contain;
   background-image: url("../images/background/unicorn2.png");

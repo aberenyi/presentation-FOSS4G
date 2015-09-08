@@ -7,6 +7,7 @@ var bespoke = require('bespoke'),
   scale = require('bespoke-scale'),
   hash = require('bespoke-hash'),
   progress = require('bespoke-progress'),
+  bullets = require('bespoke-bullets'),
   sync = require('bespoke-sync/client');//,
   //notes = require('bespoke-notes');
 
@@ -19,6 +20,7 @@ bespoke.from('article', [
   scale(),
   hash(),
   progress(),
+  bullets(),
   sync
   ({
     log: false,

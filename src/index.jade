@@ -3,18 +3,15 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title Webtérképek az energiaiparban
+    title Open Source + GIS = FOSS4G
     link(rel='stylesheet', type='text/css', href='build/build.css')
-
+  body
     article
       section
         h1
-          span.highlight webtérkép
-          | ek az&nbsp;
-          span.highlight energiaipar
-          | ban
-        h3 &mdash; esettanulmány
-        //aside
+          span Open Source + GIS =
+          span.highlight  FOSS4G
+        aside
           span Note! :)
 
       section
@@ -26,61 +23,104 @@ html
               img(src="images/gislab.png" height="15")
           br
           div
-            span.fa-stack
-              i.fa.fa-square-o.fa-stack-2x
-              i.fa.fa-twitter.fa-stack-1x
-            a(href="https://twitter.com/AttilaBerenyiDr" target="_blank") @AttilaBerenyiDr
+            i.fa.fa-twitter
+            a(href="https://twitter.com/AttilaBerenyiDr" target="_blank")  @AttilaBerenyiDr
             br
-            span.fa-stack
-              i.fa.fa-square-o.fa-stack-2x
-              i.fa.fa-send.fa-stack-1x
-            a(href="mailto:aberenyi@gislab.hu") aberenyi@gislab.hu
-
+            i.fa.fa-send
+            a(href="mailto:aberenyi@gislab.hu")  aberenyi@gislab.hu
+            
       section
-        img(src="images/lr_senergy.png" height="50")
-        h1
-          | Egy&nbsp;
-          span.highlight FOSS4G
-          |  komponensenkre épülő projekt-támogatási&nbsp;
-          span.highlight keret
-          | rendszer az&nbsp;
-          span.highlight olaj- és gáz
-          | iparban
+        h1.highlight(data-bespoke-bullet) nyílt forráskódú [szoftver]
+        h1(data-bespoke-bullet) szabadon megosztható
+        h1(data-bespoke-bullet) szabadon változtatható
+        h1(data-bespoke-bullet) a változtatások szabadon megoszthatók
 
-      section.image.image-jockey-ewing
-        h1.bottom.bgHighlight-primary
-          span.highlight Olaj- és gáz
-          | ipar?!
-
+      section.image.image-once-upon-a-time
+        div.bottom.text-3em.bgHighlight-primary MIT AI Lab ~1980
+        
+      section.image.image-quiz(data-bespoke-state='quiz')
+      
+      section(data-bespoke-state='quiz')
+        h1 #1 Minek a rövidítése az MIT?
+      
       section
-        .left
+        img(src="images/rms.jpg")  
+        
+      section.image.image-xerox-9700
+      
+      section
+        .monospace printer has jammed
+          
+      section.image.image-rage
+      
+      section
+        div(data-bespoke-bullet)
           h1
-            | múlt &mdash;&nbsp;
-            span.highlight probléma&nbsp;
-            i.fa.fa-arrows-h
-            |  igény
-          h1 jelen
-          h1
-            | jövő &mdash;&nbsp;
-            span.highlight kihívások 
-            i.fa.fa-arrows-h
-            |  fejlesztési irány
-
+            | Unix&nbsp;
+            span.highlight
+              i.fa.fa-usd
+              i.fa.fa-usd
+              i.fa.fa-usd
+            | &nbsp;
+            i.fa.fa-battery-full
+            
+          h1 Minix&nbsp;
+            span.highlight
+              i.fa.fa-usd
+            | &nbsp;
+            i.fa.fa-battery-quarter
+          
+          div(data-bespoke-bullet)
+            h1
+              span.highlight G
+              | NU's&nbsp;
+              span.highlight N
+              | ot&nbsp;
+              span.highlight U
+              | nix&nbsp;
+              span.fa-stack
+                i.highlight.fa.fa-usd.fa-stack-1x
+                i.fa.fa-ban.fa-stack-2x
+              | &nbsp;
+              i.fa.fa-battery-full
+          
       section
-        h2.left
-          | Valahol Ausztráliától délre, 2013 elején
-          br
-          br
-          | - Ezek a legfrissebb koordináták?
-          br
-          | - Nem, azt hittem Bob elküldte neked.
-          br
-          | - Bob szabin van...
-          br
+        div.monospace(style="padding: 15px")
+          h2 libraries
+          h2 compilers
+          h2 shells
+          h2 editors
+          h2.muted-40 kernel
+          h2 &nbsp;
+          h2.muted-20 hardware
+          
+      section
+        h1.text-6em
+          i.fa.fa-forward
+          | 1991
+        
+      section
+        img(src="images/linus_tordvalds.jpg")
 
-      section.image.image-uh-oh
-        h1.right.text-6em.highlight Ajjaj
-
+      section.image.image-i386(data-bespoke-state='white')
+      
+      section
+        h1.highlight(data-bespoke-bullet) GNU/Linux
+        h1(data-bespoke-bullet) 1995 - Red Hat Linux ($2 mrd)
+        h1(data-bespoke-bullet) 1998 - internet "uralom"
+        
+      section.image.image-community
+        span(data-bespoke-bullet) &nbsp;
+        .bgHighlight-white.highlight(data-bespoke-bullet)
+          h1 szabadon megosztható
+          h1 szabadon változtatható
+          h1 a változtatások szabadon megoszthatók
+          
+      section.image.image-mordor
+        .bottom 1985. november 20-án kiadásra került a Windows 1.0
+          
+      section.image.image-wikipedia(data-bespoke-state='white')
+        
       section.image.image-facepalm
         .right.top
           img(src="images/no_licence.png" height="140")
@@ -329,7 +369,6 @@ html
         span Made with
           a(href='http://markdalgleish.com/projects/bespoke.js/' target="_blank")  Bespoke.js
           |  by
-          a(href='http://twitter.com/markdalgleish' target="_blank")  @markdalgleish 
-  body
+          a(href='http://twitter.com/markdalgleish' target="_blank")  @markdalgleish
+          
     script(src='build/build.js')
-

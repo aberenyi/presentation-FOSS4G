@@ -24,6 +24,10 @@ article
       background white
       color primary
 
+    &.quiz
+      background-color #D71425
+      color black
+
 .bespoke-parent
   position: absolute
   top: 0
@@ -89,15 +93,15 @@ article
 .bespoke-backdrop-active
   opacity: 1
 
-.bespoke-after
-  transform translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
-  -moz-transform translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) translateX(slide_width / -2) rotate(-0.01deg)
+//.bespoke-after
+  //transform translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
+  //-moz-transform translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) translateX(slide_width / -2) rotate(-0.01deg)
 
-.bespoke-before
-  transform translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
-  -moz-transform translateX(slide_transition_nudge_x) translateX(slide_width / 2) translateX(slide_width / 2)
-  @media print
-    transform: none
+//.bespoke-before
+  //transform translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
+  //-moz-transform translateX(slide_transition_nudge_x) translateX(slide_width / 2) translateX(slide_width / 2)
+  //@media print
+    //transform: none
 
 .bespoke-inactive
   opacity: 0
@@ -123,3 +127,16 @@ article
   height: 100%
   background: darken(secondary, 10)
   transition: width .6s ease
+
+.bespoke-bullet
+  transition all bullet_transition_length bullet_transition_easing
+
+.bespoke-bullet-inactive
+  opacity 0
+  li&
+    transform translateX(-10px) translateZ(-10px) rotateY(20deg)
+  @media print
+    opacity 1
+
+.bespoke-bullet-active
+  opacity 1

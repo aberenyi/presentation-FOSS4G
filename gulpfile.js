@@ -15,7 +15,8 @@ var pkg = require('./package.json'),
   opn = require('opn'),
   ghpages = require('gh-pages'),
   path = require('path'),
-  bespokeSyncMiddleware = require('bespoke-sync/server')({
+  bespokeSyncMiddleware = require('bespoke-sync/server')
+  ({
     log: false,
     ssePath: '/sse-slides/',
     xhrPath: '/slide/'

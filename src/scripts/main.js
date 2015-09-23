@@ -8,8 +8,8 @@ var bespoke = require('bespoke'),
   hash = require('bespoke-hash'),
   progress = require('bespoke-progress'),
   bullets = require('bespoke-bullets'),
-  sync = require('bespoke-sync/client');//,
-  //notes = require('bespoke-notes');
+  sync = require('bespoke-sync/client'),
+  notes = require('bespoke-notes');
 
 // Bespoke.js
 bespoke.from('article', [
@@ -26,11 +26,11 @@ bespoke.from('article', [
     log: false,
     ssePath: '/sse-slides/',
     xhrPath: '/slide/'
-  })/*,
+  }),
   notes
   ({
     key: 0x4e, // Key that toggles notes, default: 0x4e ('n' key)
     visible: false, // Whether to display notes on startup, default: false
-    slideWidth: 800 // Slide width, default: 800)
-  })*/
+    slideWidth: 640 // Slide width, default: 800)
+  })
 ]);
